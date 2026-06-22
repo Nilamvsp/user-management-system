@@ -15,7 +15,7 @@ function App() {
     try {
 
       const response = await axios.get(
-        "http://localhost:8000/users"
+        "https://user-management-backend-ka10.onrender.com/users"
       );
 
       setUsers(response.data);
@@ -40,7 +40,7 @@ function App() {
     try {
 
       await axios.delete(
-        `http://localhost:8000/users/${id}`
+        `https://user-management-backend-ka10.onrender.com/users/${id}`
       );
 
       await fetchUsers();

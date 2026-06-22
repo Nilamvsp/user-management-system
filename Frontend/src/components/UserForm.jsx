@@ -39,14 +39,14 @@ function UserForm({
       if (editId) {
 
         await axios.put(
-          `http://localhost:8000/users/${editId}`,
+          `https://user-management-backend-ka10.onrender.com/users/${editId}`,
           data
         );
 
       } else {
 
         await axios.post(
-          "http://localhost:8000/users",
+          "https://user-management-backend-ka10.onrender.com/users",
           data
         );
 
