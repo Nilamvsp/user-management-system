@@ -16,15 +16,6 @@ connection.connect((err) => {
     }
 
     console.log("MySQL Connected");
-
-    connection.query("TRUNCATE TABLE users", (err, result) => {
-        if (err) {
-            console.log(err);
-            return;
-        }
-
-        console.log("users table created")
-    })
 });
 
 module.exports = connection;
