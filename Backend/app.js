@@ -11,11 +11,13 @@ app.use(express.json());
 app.get("/users", (req, res) => {
     let sql = "select * from users"
     connection.query(sql, (err, result) => {
-        if (err) {
-            return res.status(500).json({
-                msg: "Database error"
-            })
-        }
+       if (err) {
+    console.log(err);
+
+    return res.status(500).json({
+        msg: err.message
+    });
+}
 
         res.json(result);
 
